@@ -2,8 +2,8 @@
 <html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rock a metal v HV</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rock a metal v hudební výchově</title>
 
   <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -27,17 +27,26 @@
 
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap');
+    :root { color-scheme: dark; }
     body {
       font-family: 'Rubik', sans-serif;
       background-color: #111827;
       color: #F3F4F6;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
     }
     .tab-content { display: none; }
     .tab-content.active { display: block; animation: fadeIn .35s ease; }
     @keyframes fadeIn { from {opacity:0; transform: translateY(8px)} to {opacity:1; transform: translateY(0)} }
     .guitar-string { height: 2px; background: linear-gradient(90deg, transparent, #F43F5E, transparent); margin: 8px 0; }
+    /* Mobile typography helpers */
+    .text-balance { text-wrap: balance; }
+    @media (prefers-reduced-motion: reduce) {
+      .tab-content.active { animation: none !important; }
+    }
   </style>
 </head>
+
 <body class="min-h-screen bg-dark text-[15px] sm:text-base md:text-[17px]">
   <!-- Header -->
   <header class="sticky top-0 z-50 bg-dark/80 backdrop-blur-md border-b border-gray-800">
@@ -47,7 +56,7 @@
         <h1 class="text-2xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">RockEd</h1>
       </div>
 
-      <nav class="hidden md:flex items-center gap-8">
+      <nav class="hidden md:flex items-center gap-6">
         <a href="#home" class="text-light hover:text-primary transition">Home</a>
         <a href="#thesis" class="text-light hover:text-primary transition">Thesis</a>
         <a href="#resources" class="text-light hover:text-primary transition">Resources</a>
@@ -61,24 +70,24 @@
   </header>
 
   <!-- Hero -->
-  <section id="home" class="relative overflow-hidden py-12 sm:py-16 lg:py-24 scroll-mt-24 md:scroll-mt-28">
+  <section id="home" class="relative overflow-hidden py-10 sm:py-14 lg:py-20 scroll-mt-24 md:scroll-mt-28">
     <div class="absolute inset-0 bg-gradient-to-b from-dark/80 to-dark -z-10"></div>
 
     <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-      <div class="grid gap-10 lg:grid-cols-2 lg:items-center">
+      <div class="grid gap-8 lg:gap-10 lg:grid-cols-2 lg:items-center">
         <div>
-          <h2 class="leading-tight text-4xl sm:text-5xl lg:text-6xl 2xl:text-7xl font-bold mb-4">
-  <span class="whitespace-nowrap">Rock&nbsp;a&nbsp;metal&nbsp;v&nbsp;hudební&nbsp;výchově</span>
-</h2>
-           Rock a metal
-<span class="text-primary"> v hudební výchově</span>         
- </h2>
-          <p class="text-lg text-gray-300 mb-8 max-w-2xl">
+          <!-- TWO-LINE HEADING: white first line, purple second line -->
+          <h2 class="leading-tight text-balance font-bold mb-4">
+            <span class="block text-4xl sm:text-5xl lg:text-6xl 2xl:text-7xl text-white">Rock a metal</span>
+            <span class="block mt-1 text-3xl sm:text-4xl lg:text-5xl 2xl:text-6xl text-primary">v&nbsp;hudební&nbsp;výchově</span>
+          </h2>
+
+          <p class="text-gray-300 mb-6 sm:mb-8 max-w-2xl">
             Exploring the impact of rock music pedagogy on student engagement and academic performance
           </p>
-          <div class="flex flex-wrap gap-4">
-            <a href="#thesis" class="bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-lg font-medium transition">Read Thesis</a>
-            <a href="#resources" class="border border-primary text-primary hover:bg-primary/10 px-6 py-3 rounded-lg font-medium transition">Resources</a>
+          <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto">
+            <a href="#thesis" class="w-full sm:w-auto text-center bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-lg font-medium transition">Read Thesis</a>
+            <a href="#resources" class="w-full sm:w-auto text-center border border-primary text-primary hover:bg-primary/10 px-6 py-3 rounded-lg font-medium transition">Resources</a>
           </div>
         </div>
 
@@ -88,7 +97,7 @@
             alt="Music education class – students exploring an electric guitar"
             class="w-full max-w-2xl rounded-lg shadow-2xl border-2 border-primary/50 object-cover"
             loading="lazy" decoding="async"
-            sizes="(min-width:1024px) 40vw, 90vw"
+            sizes="(min-width:1024px) 40vw, 92vw"
           />
         </div>
       </div>
@@ -98,13 +107,13 @@
   <!-- Thesis -->
   <section id="thesis" class="py-12 sm:py-16 lg:py-24 px-4 sm:px-6 lg:px-8 bg-gray-900/50 scroll-mt-24 md:scroll-mt-28">
     <div class="container mx-auto max-w-7xl">
-      <div class="text-center mb-12 lg:mb-16">
-        <h2 class="text-3xl md:text-4xl font-bold mb-4">Research <span class="text-primary">Thesis</span></h2>
+      <div class="text-center mb-10 lg:mb-14">
+        <h2 class="text-3xl md:text-4xl font-bold mb-3">Research <span class="text-primary">Thesis</span></h2>
         <div class="w-20 h-1 bg-primary mx-auto"></div>
       </div>
 
       <!-- Tablist -->
-      <div class="flex flex-wrap justify-center gap-2 md:gap-6 mb-10 border-b border-gray-800" role="tablist" aria-label="Thesis sections">
+      <div class="flex flex-wrap justify-center gap-2 md:gap-6 mb-8 md:mb-10 border-b border-gray-800" role="tablist" aria-label="Thesis sections">
         <button class="tab-btn px-4 md:px-6 py-3 font-medium text-light hover:text-primary transition border-b-2 border-transparent hover:border-primary"
                 data-tab="tab1" role="tab" aria-selected="true" aria-controls="tab1">TAB 1</button>
         <button class="tab-btn px-4 md:px-6 py-3 font-medium text-light hover:text-primary transition border-b-2 border-transparent hover:border-primary"
@@ -344,7 +353,7 @@
         <div>
           <div class="flex items-center gap-2">
             <i data-feather="music" class="text-primary"></i>
-            <h2 class="text-xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Rock & metal v HV</h2>
+            <h2 class="text-xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">RockEd</h2>
           </div>
           <p class="text-gray-400 mt-2">Revolutionizing music education through rock pedagogy</p>
         </div>
@@ -434,8 +443,10 @@
       menuToggle.setAttribute('aria-expanded', 'false');
     }
 
+    // Toggle handlers + a11y
     menuToggle.addEventListener('click', openMenu);
     menuClose.addEventListener('click', closeMenu);
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeMenu(); });
 
     // Close menu on link click and allow native smooth scroll
     mobileMenu.querySelectorAll('a[href^="#"]').forEach(a => {
@@ -447,10 +458,3 @@
   </script>
 </body>
 </html>
-
-
-
-
-
-
-
