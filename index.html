@@ -57,10 +57,10 @@
       </div>
 
       <nav class="hidden md:flex items-center gap-6">
-        <a href="#home" class="text-light hover:text-primary transition">Home</a>
+        <a href="#Domů" class="text-light hover:text-primary transition">Domů</a>
         <a href="#Hudební rockové pozadí" class="text-light hover:text-primary transition">Hudební rockové pozadí</a>
         <a href="#Metodiky" class="text-light hover:text-primary transition">Metodiky</a>
-        <a href="#about" class="text-light hover:text-primary transition">About</a>
+        <a href="#O projektu" class="text-light hover:text-primary transition">About</a>
       </nav>
 
       <button id="menu-toggle" class="md:hidden" aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu">
@@ -70,7 +70,7 @@
   </header>
 
   <!-- Hero -->
-  <section id="home" class="relative overflow-hidden py-10 sm:py-14 lg:py-20 scroll-mt-24 md:scroll-mt-28">
+  <section id="Domů" class="relative overflow-hidden py-10 sm:py-14 lg:py-20 scroll-mt-24 md:scroll-mt-28">
     <div class="absolute inset-0 bg-gradient-to-b from-dark/80 to-dark -z-10"></div>
 
     <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -382,10 +382,10 @@
       <i data-feather="x" class="text-light w-8 h-8"></i>
     </button>
     <nav class="flex flex-col items-center gap-8 text-center">
-      <a href="#home" class="text-2xl text-light hover:text-primary transition">Home</a>
+      <a href="#Domů" class="text-2xl text-light hover:text-primary transition">Domů</a>
       <a href="#Hudební rockové pozadí" class="text-2xl text-light hover:text-primary transition">Hudební rockové pozadí</a>
       <a href="#Metodiky" class="text-2xl text-light hover:text-primary transition">Metodiky</a>
-      <a href="#about" class="text-2xl text-light hover:text-primary transition">About</a>
+      <a href="#O projektu" class="text-2xl text-light hover:text-primary transition">About</a>
     </nav>
     <div class="mt-12 flex gap-6">
       <a href="#" class="text-light hover:text-primary transition"><i data-feather="twitter" class="w-6 h-6"></i></a>
@@ -420,7 +420,7 @@
         const i = tabButtons.indexOf(btn);
         if (e.key === 'ArrowRight') { e.preventDefault(); tabButtons[(i+1)%tabButtons.length].focus(); }
         if (e.key === 'ArrowLeft')  { e.preventDefault(); tabButtons[(i-1+tabButtons.length)%tabButtons.length].focus(); }
-        if (e.key === 'Home')       { e.preventDefault(); tabButtons[0].focus(); }
+        if (e.key === 'Domů')       { e.preventDefault(); tabButtons[0].focus(); }
         if (e.key === 'End')        { e.preventDefault(); tabButtons[tabButtons.length-1].focus(); }
       });
     });
